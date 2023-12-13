@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+        <%= title %>
+    </title>
+    <meta
+      name="description"
+      content="A basic custom template for Pico using only CSS custom properties (variables). Built with Pico CSS."
+    />
+    <link rel="shortcut icon" href="https://picocss.com/favicon.ico" />
+
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+   
+
+    <!-- Main -->
+    <main class="container">
+      <!-- Preview -->
+        <h2>Sitemap Object Generator</h2>
+        
+        <form id="form">
+            <label for="sitemap-url">Sitemap URL</label>
+            <input
+              id="sitemap-url"
+              type="text"
+              name="sitemap-url"
+              placeholder="Introduce aqui la url del sitemap.xml"
+              required
+            />
+            <small>Por ejemplo: https://zoom.us/sitemap.xml</small>
+            <button type="submit" id="button" class="contrast" >Generate</button>
+        </form>
+
+        <div class="results-container">
+            <pre id="results">
+
+            </pre>
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="module"  src="/sitemap-generator.js"></script>
+  </body>
+</html>
